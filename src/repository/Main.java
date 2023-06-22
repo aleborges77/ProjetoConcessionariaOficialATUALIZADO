@@ -17,7 +17,7 @@ public class Main {
     public static void main(String[] args) {
         exibirMensagemBoasVindas();
 
-        concessionaria = new Concessionaria("Premium Cars");
+        concessionaria = new Concessionaria("Concessionária de Luxo");
         clientes = new ArrayList<>();
         carros = new ArrayList<>();
         servicos = new ArrayList<>();
@@ -25,14 +25,14 @@ public class Main {
         spc = new SPC();
 
         // Criando alguns carros
-        Carro carro1 = new Carro("BMW", "Série 7", 2022, "Preto", 650000.00, 1);
-        Carro carro2 = new Carro("Mercedes-Benz", "Classe S", 2023, "Branco", 580000.00, 1);
-        Carro carro3 = new Carro("Audi", "A8", 2022, "Prata", 265000.00, 4);
-        Carro carro4 = new Carro("Lamborghini", "Aventador", 2017, "Amarelo", 4000000.00, 2);
-        Carro carro5 = new Carro("Ferrari", "488 GTB", 2019, "Vermelho", 2750000.00, 1);
-        Carro carro6 = new Carro("Porsche", "911 Turbo S", 2022, "Azul", 1320000.00, 3);
-        Carro carro7 = new Carro("Rolls-Royce", "Phantom", 2023, "Branco", 2000000.00, 1);
-        Carro carro8 = new Carro("Bentley", "Continental GT", 2021, "Cinza", 2500000.00, 1);
+        Carro carro1 = new Carro("BMW", "Série 7", 2022, "Preto", 250000.00, 1);
+        Carro carro2 = new Carro("Mercedes-Benz", "Classe S", 2023, "Branco", 280000.00, 2);
+        Carro carro3 = new Carro("Audi", "A8", 2023, "Prata", 265000.00, 3);
+        Carro carro4 = new Carro("Lamborghini", "Aventador", 2022, "Amarelo", 800000.00, 4);
+        Carro carro5 = new Carro("Ferrari", "488 GTB", 2023, "Vermelho", 750000.00, 5);
+        Carro carro6 = new Carro("Porsche", "911 Turbo S", 2022, "Azul", 320000.00, 6);
+        Carro carro7 = new Carro("Rolls-Royce", "Phantom", 2023, "Branco", 900000.00, 7);
+        Carro carro8 = new Carro("Bentley", "Continental GT", 2022, "Cinza", 400000.00, 8);
 
         carros.add(carro1);
         carros.add(carro2);
@@ -44,13 +44,13 @@ public class Main {
         carros.add(carro8);
 
         // Criando alguns funcionários
-        Funcionario funcionario1 = new Funcionario("João", "Vendedor", 8000.00);
-        Funcionario funcionario2 = new Funcionario("Maria", "Gerente", 18000.00);
-        Funcionario funcionario3 = new Funcionario("Pedro", "Vendedor", 7000.00);
-        Funcionario funcionario4 = new Funcionario("Ana", "Vendedor", 7800.00);
+        Funcionario funcionario1 = new Funcionario("João", "Vendedor", 5000.00);
+        Funcionario funcionario2 = new Funcionario("Maria", "Gerente", 8000.00);
+        Funcionario funcionario3 = new Funcionario("Pedro", "Vendedor", 4500.00);
+        Funcionario funcionario4 = new Funcionario("Ana", "Vendedor", 4800.00);
         Funcionario funcionario5 = new Funcionario("Lucas", "Financeiro", 6000.00);
         Funcionario funcionario6 = new Funcionario("Juliana", "Marketing", 5500.00);
-        Funcionario funcionario7 = new Funcionario("Gustavo", "Vendedor", 5000.00);
+        Funcionario funcionario7 = new Funcionario("Gustavo", "Vendedor", 4700.00);
         Funcionario funcionario8 = new Funcionario("Carolina", "Vendedor", 4900.00);
 
         funcionarios.add(funcionario1);
@@ -63,14 +63,14 @@ public class Main {
         funcionarios.add(funcionario8);
 
         // Criando alguns clientes
-        Cliente cliente1 = new Cliente("Pedro", "123456789", "Rua Brilhosa, 123");
-        Cliente cliente2 = new Cliente("Ana", "987654321", "Rua Estrela, 456");
-        Cliente cliente3 = new Cliente("Mariana", "654987321", "Rua Bonita, 789");
-        Cliente cliente4 = new Cliente("Rafael", "789654321", "Rua Dois Irmãos, 987");
-        Cliente cliente5 = new Cliente("Isabela", "321456987", "Rua General Tal, 6547");
-        Cliente cliente6 = new Cliente("Thiago", "987123456", "Rua Floriano, 321");
-        Cliente cliente7 = new Cliente("Amanda", "456789321", "Rua Getset, 951");
-        Cliente cliente8 = new Cliente("Gabriel", "321789654", "Rua Diferente, 159");
+        Cliente cliente1 = new Cliente("Pedro", "Rua A, 123", "123456789");
+        Cliente cliente2 = new Cliente("Ana", "Rua B, 456", "987654321");
+        Cliente cliente3 = new Cliente("Mariana", "Rua C, 789", "654987321");
+        Cliente cliente4 = new Cliente("Rafael", "Rua D, 987", "789654321");
+        Cliente cliente5 = new Cliente("Isabela", "Rua E, 654", "321456987");
+        Cliente cliente6 = new Cliente("Thiago", "Rua F, 321", "987123456");
+        Cliente cliente7 = new Cliente("Amanda", "Rua G, 951", "456789321");
+        Cliente cliente8 = new Cliente("Gabriel", "Rua H, 159", "321789654");
 
         clientes.add(cliente1);
         clientes.add(cliente2);
@@ -83,8 +83,8 @@ public class Main {
 
         // Criando alguns serviços
         Servicos servico1 = new Servicos("Lavação", 50.00);
-        Servicos servico2 = new Servicos("Polimento", 200.00);
-        Servicos servico3 = new Servicos("Troca de óleo", 2000.00);
+        Servicos servico2 = new Servicos("Polimento", 100.00);
+        Servicos servico3 = new Servicos("Troca de óleo", 80.00);
 
         servicos.add(servico1);
         servicos.add(servico2);

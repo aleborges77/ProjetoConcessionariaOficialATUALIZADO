@@ -17,10 +17,13 @@ public class Carro {
         this.cor = cor;
         this.preco = preco;
         this.quantidadeEmEstoque = quantidadeEmEstoque;
-        
+
     }
 
-    public Carro(String bmw, String modelo, int ano, String preto, double preco, int quantidadeEmEstoque) {
+    public Carro(String marca, String modelo, int ano, String preto, double preco, int quantidadeEmEstoque) {
+    }
+
+    public static void add(Carro carro1) {
     }
 
     // Getters e setters

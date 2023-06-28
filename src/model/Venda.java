@@ -13,6 +13,10 @@ public class Venda {
         this.valorVenda = valorVenda;
     }
 
+    public Venda(Carro carro, Cliente cliente, double valorVenda) {
+
+    }
+
     public Carro getCarro() {
         return carro;
     }

@@ -10,9 +10,8 @@ public class Main {
     private static Concessionaria concessionaria;
     private static List<Cliente> clientes;
     private static List<Carro> carros;
-    private static List<Servicos> servicos;
     private static List<Funcionario> funcionarios;
-    private static SPC spc;
+    private static Serasa serasa;
 
     public static void main(String[] args) {
         exibirMensagemBoasVindas();
@@ -20,21 +19,31 @@ public class Main {
         concessionaria = new Concessionaria("Concessionária de Luxo");
         clientes = new ArrayList<>();
         carros = new ArrayList<>();
-        servicos = new ArrayList<>();
+        List<Servicos> servicos = new ArrayList<>();
         funcionarios = new ArrayList<>();
-        spc = new SPC();
+        serasa = new Serasa();
 
         // Criando alguns carros
-        Carro carro1 = new Carro("BMW", "Série 7", 2022, "Preto", 250000.00, 1);
-        Carro carro2 = new Carro("Mercedes-Benz", "Classe S", 2023, "Branco", 280000.00, 2);
-        Carro carro3 = new Carro("Audi", "A8", 2023, "Prata", 265000.00, 3);
-        Carro carro4 = new Carro("Lamborghini", "Aventador", 2022, "Amarelo", 800000.00, 4);
-        Carro carro5 = new Carro("Ferrari", "488 GTB", 2023, "Vermelho", 750000.00, 5);
-        Carro carro6 = new Carro("Porsche", "911 Turbo S", 2022, "Azul", 320000.00, 6);
-        Carro carro7 = new Carro("Rolls-Royce", "Phantom", 2023, "Branco", 900000.00, 7);
-        Carro carro8 = new Carro("Bentley", "Continental GT", 2022, "Cinza", 400000.00, 8);
+        CarroDAO carroDAO = new CarroDAO();
 
-        carros.add(carro1);
+        Carro carro1 = new Carro("BMW", "Série 7", 2022, "Preto", 550000.00, 1);
+        Carro carro2 = new Carro("Mercedes-Benz", "Classe S", 2023, "Branco", 580000.00, 2);
+        Carro carro3 = new Carro("Audi", "A8", 2023, "Prata", 350000.00, 4);
+        Carro carro4 = new Carro("Lamborghini", "Aventador", 2022, "Amarelo", 5000000.00, 2);
+        Carro carro5 = new Carro("Ferrari", "488 GTB", 2018, "Vermelho", 3500000.00, 1);
+        Carro carro6 = new Carro("Porsche", "911 Turbo S", 2021, "Azul", 1800000.00, 3);
+        Carro carro7 = new Carro("Rolls-Royce", "Phantom", 2023, "Branco", 3900000.00, 1);
+        Carro carro8 = new Carro("Bentley", "Continental GT", 2022, "Cinza", 4400000.00, 1);
+
+        carroDAO.add(carro1);
+        carroDAO.add(carro2);
+        carroDAO.add(carro3);
+        carroDAO.add(carro4);
+        carroDAO.add(carro5);
+        carroDAO.add(carro6);
+
+
+                carros.add(carro1);
         carros.add(carro2);
         carros.add(carro3);
         carros.add(carro4);
@@ -63,14 +72,14 @@ public class Main {
         funcionarios.add(funcionario8);
 
         // Criando alguns clientes
-        Cliente cliente1 = new Cliente("Pedro", "Rua A, 123", "123456789");
-        Cliente cliente2 = new Cliente("Ana", "Rua B, 456", "987654321");
-        Cliente cliente3 = new Cliente("Mariana", "Rua C, 789", "654987321");
-        Cliente cliente4 = new Cliente("Rafael", "Rua D, 987", "789654321");
-        Cliente cliente5 = new Cliente("Isabela", "Rua E, 654", "321456987");
-        Cliente cliente6 = new Cliente("Thiago", "Rua F, 321", "987123456");
-        Cliente cliente7 = new Cliente("Amanda", "Rua G, 951", "456789321");
-        Cliente cliente8 = new Cliente("Gabriel", "Rua H, 159", "321789654");
+        Cliente cliente1 = new Cliente("Alessandro", "123.456.789-06", "Rua Alameda, 123");
+        Cliente cliente2 = new Cliente("Beatriz", "221.456.789-06", "Rua Bonita, 321");
+        Cliente cliente3 = new Cliente("Carolina", "323.255.089-12", "Rua Caverna, 432");
+        Cliente cliente4 = new Cliente("Deivid", "423.255.089-12", "Rua Direita, 521");
+        Cliente cliente5 = new Cliente("Ester", "521.634.900-10", "Rua Elevada, 621");
+        Cliente cliente6 = new Cliente("Fernando", "631.765.800-11", "Rua Feia, 781");
+        Cliente cliente7 = new Cliente("Gabriela", "791.234.901-12", "Rua Geral, 891");
+        Cliente cliente8 = new Cliente("Hérica", "892.243.891-13", "Rua Hotel, 991");
 
         clientes.add(cliente1);
         clientes.add(cliente2);
@@ -82,9 +91,9 @@ public class Main {
         clientes.add(cliente8);
 
         // Criando alguns serviços
-        Servicos servico1 = new Servicos("Lavação", 50.00);
-        Servicos servico2 = new Servicos("Polimento", 100.00);
-        Servicos servico3 = new Servicos("Troca de óleo", 80.00);
+        Servicos servico1 = new Servicos("Lavação", 300.00);
+        Servicos servico2 = new Servicos("Polimento", 1000.00);
+        Servicos servico3 = new Servicos("Troca de óleo", 2000.00);
 
         servicos.add(servico1);
         servicos.add(servico2);
@@ -113,12 +122,16 @@ public class Main {
             switch (opcao) {
                 case "1":
                     cadastrarCliente();
+                    
+                    
                     break;
                 case "2":
                     adicionarCarroEstoque();
                     break;
                 case "3":
                     exibirEstoque();
+                    exibirCarros();
+                    
                     break;
                 case "4":
                     realizarVenda();
@@ -131,6 +144,9 @@ public class Main {
                     break;
             }
         }
+    }
+
+    private static void exibirCarros() {
     }
 
     private static void cadastrarCliente() {
@@ -178,7 +194,7 @@ public class Main {
             Cliente cliente = buscarClientePorCPF(cpfCliente);
 
             if (cliente != null) {
-                if (!spc.verificarClienteNegativado(cliente)) {
+                if (!serasa.verificarClienteNegativado(cliente)) {
                     Funcionario vendedor = selecionarVendedor();
 
                     if (vendedor != null) {

@@ -72,14 +72,14 @@ public class Main {
         funcionarios.add(funcionario8);
 
         // Criando alguns clientes
-        Cliente cliente1 = new Cliente("Pedro", "Rua A, 123", "123456789");
-        Cliente cliente2 = new Cliente("Ana", "Rua B, 456", "987654321");
-        Cliente cliente3 = new Cliente("Mariana", "Rua C, 789", "654987321");
-        Cliente cliente4 = new Cliente("Rafael", "Rua D, 987", "789654321");
-        Cliente cliente5 = new Cliente("Isabela", "Rua E, 654", "321456987");
-        Cliente cliente6 = new Cliente("Thiago", "Rua F, 321", "987123456");
-        Cliente cliente7 = new Cliente("Amanda", "Rua G, 951", "456789321");
-        Cliente cliente8 = new Cliente("Gabriel", "Rua H, 159", "321789654");
+        Cliente cliente1 = new Cliente("Alessandro", "123.456.789-06", "Rua Alameda, 123");
+        Cliente cliente2 = new Cliente("Beatriz", "221.456.789-06", "Rua Bonita, 321");
+        Cliente cliente3 = new Cliente("Carolina", "323.255.089-12", "Rua Caverna, 432");
+        Cliente cliente4 = new Cliente("Deivid", "423.255.089-12", "Rua Direita, 521");
+        Cliente cliente5 = new Cliente("Ester", "521.634.900-10", "Rua Elevada, 621");
+        Cliente cliente6 = new Cliente("Fernando", "631.765.800-11", "Rua Feia, 781");
+        Cliente cliente7 = new Cliente("Gabriela", "791.234.901-12", "Rua Geral, 891");
+        Cliente cliente8 = new Cliente("Hérica", "892.243.891-13", "Rua Hotel, 991");
 
         clientes.add(cliente1);
         clientes.add(cliente2);
@@ -91,9 +91,9 @@ public class Main {
         clientes.add(cliente8);
 
         // Criando alguns serviços
-        Servicos servico1 = new Servicos("Lavação", 50.00);
-        Servicos servico2 = new Servicos("Polimento", 100.00);
-        Servicos servico3 = new Servicos("Troca de óleo", 80.00);
+        Servicos servico1 = new Servicos("Lavação", 300.00);
+        Servicos servico2 = new Servicos("Polimento", 1000.00);
+        Servicos servico3 = new Servicos("Troca de óleo", 2000.00);
 
         servicos.add(servico1);
         servicos.add(servico2);
